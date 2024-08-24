@@ -1,0 +1,39 @@
+.page {
+  @apply relative;
+}
+
+.page a {
+  @apply hover:text-gray-800 py-5;
+}
+
+@media (max-width: 767px) {
+  .input:checked ~ .menu a {
+    @apply block;
+  }
+
+  .input:checked ~ div div div:first-child {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  .input:checked ~ div div div:nth-child(2) {
+    @apply hidden;
+  }
+
+  .input:checked ~ div div div:last-child {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+
+  .input:checked ~ .menu {
+    @apply h-[48px] mt-2;
+  }
+
+  .page {
+    @apply flex h-auto;
+  }
+
+  .page a {
+    @apply py-3 w-full text-center;
+  }
+}
