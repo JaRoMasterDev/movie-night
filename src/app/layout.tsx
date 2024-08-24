@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Page from "@/components/page";
 import Navigation from "@/components/navigation";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body className={inter.className + " bg-background"}>
         <Navigation />
         <Page>{children}</Page>
+        <Analytics />
       </body>
     </html>
   );
